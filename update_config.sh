@@ -4,8 +4,12 @@
 source install_requirements.sh
 
 # .zshrc
-touch ~/.zshrc  # Create .zshrc if it does not exist
+[ -f ~/.zshrc ] && cp ~/.zshrc ~/.zshrc.bak
+[ ! -f ~/.zshrc ] && touch ~/.zshrc  # Create .zshrc if it does not exist
 cat .zshrc >> ~/.zshrc
+
+sed -i 's/^ZSH_THEME=".*"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+sed -i 's/^plugins=(.*)/plugins=(git colorize python)/' ~/.zshrc
 
 # .vimrc
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.bak

@@ -60,7 +60,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# Install npm latest version
+# Install npm latest version (Neened for nvim dependancies)
 nvm install node  # run `nvm install <VERSION>` to install a specific version (e.g. 18 for the latest patch of node18)
 nvm use node  # run `nvm use <VERSION>` to use a specific version of node
 

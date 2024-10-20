@@ -1,7 +1,4 @@
 # ARConfig Starts Here
-ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git colorize python)
-
 source $ZSH/oh-my-zsh.sh
 
 # AR functions
