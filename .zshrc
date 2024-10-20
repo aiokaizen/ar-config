@@ -1,9 +1,12 @@
 # ARConfig Starts Here
+# Add local bin to path
+export PATH="$HOME/.local/bin:$PATH"
+
 source $ZSH/oh-my-zsh.sh
 
 # AR functions
 function ff() { 
-    rg --color always --line-number --no-heading --smart-case "$1" "$2" | fzf --border --ansi --delimiter ':' --header "Search for $1 in $2" --height 50% --preview 'bat --color=always --style=numbers {1} --highlight-line {2}' --preview-window 'right,50%,border,+{2}-8' --bind "enter:become(vim {1} +{2})"; 
+    rg --color always --line-number --no-heading --smart-case "$1" "$2"  2>/dev/null | fzf --border --ansi --delimiter ':' --header "Search for $1 in $2" --height 50% --preview 'bat --color=always --style=numbers {1} --highlight-line {2}' --preview-window 'right,50%,border,+{2}-8' --bind "enter:become(vim {1} +{2})"; 
 }
 
 
