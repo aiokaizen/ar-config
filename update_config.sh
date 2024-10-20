@@ -1,19 +1,19 @@
 #/bin/bash
 
-# Aliases and shell commands
-[ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
-cp .bashrc ~
+# Install requirements
+. install_requirements.sh
 
-[ -f ~/.profile ] && mv ~/.profile ~/.profile.bak
-cp .profile ~
+# .zshrc
+touch ~/.zshrc  # Create .zshrc if it does not exist
+cat .zshrc >> ~/.zshrc
 
-[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
-cp .zshrc ~
-
+# .vimrc
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.bak
 cp .vimrc ~
 
 # Nvim config
-[ -f ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.bak
-cp .config/nvim ~/.config 
+[ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.bak
+git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+rm -rf ~/.config/nvim/lua/custom
+git clone git@github.com:aiokaizen/archad.git ~/.config/nvim/lua/custom
 
