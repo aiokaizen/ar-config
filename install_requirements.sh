@@ -10,11 +10,8 @@ sudo apt install curl
 # Download git
 sudo apt install git
 
-# Download python-env, python-dev and build-essential
-sudo apt install python3-venv python3-dev build-essential
-
-# Install some mandatory python dependancies for managing wheels
-sudo pip3 install wheel setuptools
+# Download Python dependancies
+sudo apt install python3-pip python3-setuptools python3-venv python3-dev build-essential
 
 # If you don't use python2.x you can set an alias for python to python3 with the following command
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
