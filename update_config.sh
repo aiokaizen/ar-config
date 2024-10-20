@@ -11,7 +11,13 @@ cat .zshrc >> ~/.zshrc
 sed -i 's/^ZSH_THEME=".*"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 sed -i 's/^plugins=(.*)/plugins=(git colorize python)/' ~/.zshrc
 
-# .vimrc
+# p10k.zsh
+[ ! -f ~/.p10k.zsh ] && cp .p10k.zsh ~/.p10k.zsh
+
+# tmux.conf
+[ ! -f ~/.tmux.conf ] && cp .tmux.conf ~/.tmux.conf
+
+# vimrc
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.bak
 cp .vimrc ~
 
