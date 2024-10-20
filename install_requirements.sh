@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Make sure you are using zsh as a default terminal shell in your system,
-# many tools depend on it.
+# Make sure you are using **zsh** as a default terminal shell in your system,
+# many tools that we will install depend on zsh.
 #
 
 # Download curl
@@ -9,6 +9,20 @@ sudo apt install curl
 
 # Download git
 sudo apt install git
+
+# Download python-env, python-dev and build-essential
+sudo apt install python3-venv python3-dev build-essential
+
+# Install some mandatory python dependancies for managing wheels
+sudo pip3 install wheel setuptools
+
+# If you don't use python2.x you can set an alias for python to python3 with the following command
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+
+# If you use python2.x occasionally, I recommand keeping python pointing to v3 and executing the following lines:
+# sudo update-alternatives --install /usr/bin/python2 python2 /usr/bin/python2.7 1
+# sudo update-alternatives --install /usr/bin/pip2 pip2 /usr/bin/pip2.7 1
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

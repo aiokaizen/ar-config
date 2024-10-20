@@ -1,7 +1,7 @@
 #/bin/bash
 
 # Install requirements
-. install_requirements.sh
+source install_requirements.sh
 
 # .zshrc
 touch ~/.zshrc  # Create .zshrc if it does not exist
