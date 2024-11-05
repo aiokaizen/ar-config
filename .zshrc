@@ -1,6 +1,10 @@
 # ARConfig Starts Here
+
 # Add local bin to path
 export PATH="$HOME/.local/bin:$PATH"
+
+# Path to .pythonrc.py file
+export PYTHONSTARTUP=~/.pythonrc.py
 
 source $ZSH/oh-my-zsh.sh
 
