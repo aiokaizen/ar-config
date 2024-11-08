@@ -19,15 +19,5 @@ Just run the `install.sh` script with sudo privileges, it will:
 We will be using Kanata to surcharge our home row keys in order to make typing and reaching far keys easier.
 The following keys will be remapped on hold as follows:
 
-- a: press => a | hold => Left Super
-- s: press => s | hold => Left Alt
-- d: press => d | hold => Left Shift
-- f: press => f | hold => Left Control
-- j: press => j | hold => Right Control
-- k: press => k | hold => Right Shift
-- l: press => l | hold => Right Alt
-- ;: press => ; | hold => Right Super
-
-P.S: If you want to press a certain key multiple times (e.g. pressing j 100 times to scroll 100 lines in vim) you can
-double tap hold 'j', to repeat it many times.
+- CAPS_LOCK: press => ESC | hold => Left Control
 
