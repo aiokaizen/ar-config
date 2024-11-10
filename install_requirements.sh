@@ -43,12 +43,14 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 export PATH="$PATH:/opt/nvim-linux64/bin"
+rm -rf nvim-linux64.tar.gz
 
 # Download and Install batcat
 curl -LO https://github.com/sharkdp/bat/releases/download/v0.23.0/bat_0.23.0_amd64.deb
 sudo dpkg -i bat_0.23.0_amd64.deb  # adapt version number and architecture
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
+rm -rf bat_0.23.0_amd64.deb
 
 # Download and Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

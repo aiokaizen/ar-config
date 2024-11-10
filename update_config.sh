@@ -17,6 +17,11 @@ sed -i 's/^plugins=(.*)/plugins=(git colorize python)/' ~/.zshrc
 # tmux.conf
 [ ! -f ~/.tmux.conf ] && cp .tmux.conf ~/.tmux.conf
 
+# Prepate vim nord theme
+git clone https://github.com/nordtheme/vim.git /tmp/nordtheme
+cp -r /tmp/nordtheme/colors/ ~/.vim/
+rm -rf /tmp/nordtheme
+
 # vimrc
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.bak
 cp .vimrc ~
@@ -25,5 +30,5 @@ cp .vimrc ~
 [ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.bak
 git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 rm -rf ~/.config/nvim/lua/custom
-git clone git@github.com:aiokaizen/archad.git ~/.config/nvim/lua/custom
+git clone https://github.com/aiokaizen/archad ~/.config/nvim/lua/custom
 
