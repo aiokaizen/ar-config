@@ -21,7 +21,12 @@ sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 # sudo update-alternatives --install /usr/bin/python2 python2 /usr/bin/python2.7 1
 # sudo update-alternatives --install /usr/bin/pip2 pip2 /usr/bin/pip2.7 1
 
+# Install konsole if you don't have it
+sudo apt install konsole
+cp konsole_colorschemes/* ~/.local/share/konsole/
+
 # Install oh-my-zsh
+sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install nerd font
