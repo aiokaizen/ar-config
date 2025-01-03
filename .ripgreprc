@@ -1,0 +1,20 @@
+# This is the default rg configuration file.
+
+# Search hidden files and directories:
+--hidden
+
+# Ignore all ignore files When set, ignore files such as .gitignore, .ignore and .rgignore
+# --no-ignore
+
+# Ignore .gitignore file rules
+--no-ignore-vcs
+
+--glob=!.null-ls*
+# OR: --glob=!shared_base
+
+# Use smart case
+--smart-case
+
+# Search hidden files and directories:
+# --glob=shared_base/**
+# OR: --glob=!shared_base

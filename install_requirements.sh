@@ -8,7 +8,7 @@
 sudo apt install curl
 
 # Download git
-sudo apt install git
+sudo apt install git unzip wget
 
 # Download Python dependancies
 sudo apt install python3-pip python3-setuptools python3-venv python3-dev build-essential
@@ -31,7 +31,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Install nerd font
 mkdir -p ~/.local/share/fonts
-https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/RobotoMono.zip
 wget -O /tmp/RobotoMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/RobotoMono.zip && unzip /tmp/RobotoMono.zip -d ~/.local/share/fonts
 fc-cache -fv  # Update fonts cash
 

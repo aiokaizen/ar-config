@@ -14,6 +14,9 @@ sed -i 's/^plugins=(.*)/plugins=(git colorize python)/' ~/.zshrc
 # p10k.zsh
 [ ! -f ~/.p10k.zsh ] && cp .p10k.zsh ~/.p10k.zsh
 
+# .ripgreprc
+[ ! -f ~/.ripgreprc ] && cp .ripgreprc ~/.ripgreprc
+
 # tmux.conf
 [ ! -f ~/.tmux.conf ] && cp .tmux.conf ~/.tmux.conf
 
