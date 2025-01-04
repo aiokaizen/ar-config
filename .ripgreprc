@@ -10,7 +10,9 @@
 --no-ignore-vcs
 
 --glob=!.null-ls*
-# OR: --glob=!shared_base
+--glob=!.git/**
+--glob=!.mypy_cache/**
+--glob=!**/__pycache__/**
 
 # Use smart case
 --smart-case
