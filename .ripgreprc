@@ -10,7 +10,7 @@
 --no-ignore-vcs
 
 --glob=!.null-ls*
---glob=!.git/**
+--glob=!**/.git/**
 --glob=!.mypy_cache/**
 --glob=!**/__pycache__/**
 
